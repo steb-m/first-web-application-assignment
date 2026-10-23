@@ -15,26 +15,29 @@
 <body>
 
 
-
-<p><button onclick="clickHere()"id="para" style="color:blueviolet">button 1</button></p>
-<p><button onclick="clickHere()"id="para" style="color:pink">button 2</button></p>
-<p><button onclick="clickHere()"id="para" style="color:red">button 3</button></p>
-<p><button onclick="clickHere()"id="para" style="color:purple">button 4</button></p>
-<p><button onclick="clickHere()"id="para" style="color:lightskyblue">button 5</button></p>
-<p><button onclick="clickHere()"id="para" style="color:blue">button 6</button></p>
-<p><button onclick="clickHere()"id="para" style="color:magenta">button 7</button></p>
-<p><button onclick="clickHere()"id="para" style="color:cornflowerblue">button 8</button></p>
-<p><button onclick="clickHere()"id="para" style="color:palevioletred">button 9</button></p>
-<p><button onclick="clickHere()"id="para" style="color:crimson">button 10</button></p>
-
-    <label for="colors">choose a color</label>
-    <select name="colors" id="colors">
-        <option value="red" onclick="colorChange(`red`)">red</option>
-        <option value="green" onclick="colorChange(`green`)">green</option>
-        <option value="blue" onclick="colorChange(`blue`)">blue</option>
-        <option value="random" onclick="turnRandom()">random</option>
-        <option value="reset" onclick="toReset()">reset</option>
+<div class="button">
+    <p><button class="btn-item" id="para" style="color:blueviolet">button 1</button></p>
+    <p><button class="btn-item" id="para" style="color:pink">button 2</button></p>
+    <p><button class="btn-item" id="para" style="color:red">button 3</button></p>
+    <p><button class="btn-item" id="para" style="color:purple">button 4</button></p>
+    <p><button class="btn-item" id="para" style="color:lightskyblue">button 5</button></p>
+    <p><button class="btn-item" id="para" style="color:blue">button 6</button></p>
+    <p><button class="btn-item" id="para" style="color:magenta">button 7</button></p>
+    <p><button class="btn-item" id="para" style="color:cornflowerblue">button 8</button></p>
+    <p><button class="btn-item" id="para" style="color:palevioletred">button 9</button></p>
+    <p><button class="btn-item" id="para" style="color:crimson">button 10</button></p>
+</div>
+    <div class="labbel">
+        <label for="colors">choose a color</label>
+        <select name="colors" id="colors" onchange="handleColorDropdown(this.value)">
+        <option value="">-- select --</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="random">random</option>
+        <option value="reset">reset</option>
     </select>
+    </div>
 
     <script src="script.js"></script>
 </body>

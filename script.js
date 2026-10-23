@@ -6,19 +6,18 @@ const defaultColors = [
 
 function generateTable(message, errorMessage) {
     let input = prompt(message);
-    if (input === null) return; // User canceled
+    if (input === null) return;
     input = input.trim();
 
     while (input === '' || isNaN(Number(input))) {
         input = prompt(errorMessage);
-        if (input === null) return; // User canceled
+        if (input === null) return;
         input = input.trim();
     }
 
     const num = Number(input);
     const container = document.getElementById('multiplicationTable');
 
-    // Remove any previously generated table rows (keeping the start button)
     const existingRows = container.querySelectorAll('.table-row');
     existingRows.forEach(row => row.remove());
 
@@ -63,8 +62,4 @@ function handleColorDropdown(selectedOption) {
     } else if (selectedOption) {
         changeColor(selectedOption);
     }
-}
-
-function clickHere(button) {
-    alert(`You clicked ${button.textContent.trim()}!`);
 }
